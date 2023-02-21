@@ -1,13 +1,15 @@
 payrate = 10.0
 paycheck = 0
-try:
-    answer = float(input("How many hours did you work? "))
 
-except:
-    print("There was an error")
-    # does no go to the else
+while True:
+    try:
+        answer = float(input("How many hours did you work? "))
+        paycheck = answer * payrate
+        print(f"Your paycheck is ${paycheck:,.2f}")
+        break
 
-else:
-    paycheck = answer * payrate
+    except ValueError as err:
+        print(f"There was an error. The error code is: {err}")
+        # does no go to the else
 
-print(f"Your paycheck is ${paycheck:,.2f}")
+print("It is done")
