@@ -49,4 +49,18 @@ plt.tick_params(axis="both", which="major", labelsize=12)
 
 fig.autofmt_xdate()
 
+# plt.show()
+
+plt.subplot(2, 1, 1)
+plt.plot(dates, highs, c="red")
+plt.title("Highs")
+
+plt.subplot(2, 1, 2)
+plt.plot(dates, lows, c="blue")
+plt.title("Lows")
+
+plt.suptitle("Highs and Lows of Sitka, Alaska")
+
+fig.autofmt_xdate()
+
 plt.show()
